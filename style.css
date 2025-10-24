@@ -1,0 +1,46 @@
+
+.header {
+    margin: 0 4em;
+
+    .nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .nav-logo-container {
+            .figure-logo {
+                .logo {
+                    width: 6rem;
+                    opacity: 1;
+
+                    &:hover{
+                        opacity: 0.75;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .nav-links {
+            display: flex;
+            flex-direction: row;
+            gap: 2.5rem;
+            color:#AF3F9C;
+            font-family: sans-serif;
+
+            .link-1, .link-2, .link-3 {
+                &:hover {
+                    color: #7e0061;
+                    cursor: pointer;
+                }
+            }
+        }
+        .nav-inquiry {
+            .inquiry-link {
+                padding: 0.75rem;
+                border: 1px solid #030349;
+                border-radius: 8px;
+            }
+        }
+    }
+}
