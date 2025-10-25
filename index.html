@@ -23,10 +23,10 @@
     <title>Edwizard</title>
 
     <!--external css file 👇 -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.scss" />
 
     <!-- javascript external file 👇 -->
-<!--    <script id="root" src="script.js" defer></script>-->
+    <script id="root" src="script.js" defer></script>
 </head>
 
 <body>
@@ -34,12 +34,9 @@
 <header class="header">
     <nav class="nav">
         <div class="nav-logo-container">
-            <figure class="figure-logo">
-                <a href="index.html">
-                    <img src="/assets/logo-new.png" alt="company logo" class="logo"/>
-                </a>
-    <!--            <figcaption> The edwizard company logo</figcaption>-->
-            </figure>
+            <a href="index.html">
+                <img src="/assets/logo-new.png" alt="company logo" class="logo"/>
+            </a>
         </div>
         <div class="nav-links">
             <h4 class="dropdown link-1">
@@ -57,51 +54,85 @@
             <h4 class="link-2">
                 <a href="pages/About-us.html">About us</a>
             </h4>
-<!--            <h4 class="link-3">-->
-<!--                <a href="pages/Contact-us.html">Contact us</a>-->
-<!--            </h4>-->
         </div>
-
         <div class="nav-inquiry">
             <h4 class="inquiry-link">
                 <a href="pages/Contact-us.html">Inquire Now</a>
             </h4>
         </div>
+        <div class="hamburger" id="hamburger">
+            <figure>
+                <img
+                    class="hamburger-icon"
+                    id="hamburger-icon"
+                    src="assets/hamburger-icon.png"
+                    alt="responsive icon"
+                />
+            </figure>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
+
+    <div class="mobile-menu" id="mobile-menu">
+        <h4 class="mobile-link dropdown">
+            Programs
+            <div class="dropdown-menu">
+                <div class="dropdown-item">Science experiments</div>
+                <div class="dropdown-item">Vedic Maths</div>
+                <div class="dropdown-item">IQ enhancements</div>
+                <div class="dropdown-item">Tuition classes</div>
+                <div class="dropdown-item">English speaking classes</div>
+                <div class="dropdown-item">IELTS</div>
+                <div class="dropdown-item">New upcoming programs...</div>
+            </div>
+        </h4>
+
+        <h4 class="mobile-link">
+            <a href="pages/About-us.html">About us</a>
+        </h4>
+
+        <h4 class="mobile-inquiry">
+            <a href="pages/Contact-us.html">Inquire Now</a>
+        </h4>
+    </div>
+
 </header>
 
 <!-- main 👇 -->
-<main class="main" role="main">
-    <section class="hero-section">
-        <div class="text">
-            <div class="only-text">
-                <p class="text-title">Edwizard</p>
-                <p class="text-description">
-                Edwizard is an endeavor to make the children understand all the concepts
-                they study in their school curriculum, in a practical way. This will help
-                the children to have sustainable understanding of all the concepts. It contemplates
-                to improve the conceptual understanding and helps student to acquire scientific temper
-                by providing hands-on experiment, improved IQ and improved mathematical skills,
-                programming skills, language skill
-            </p>
-            </div>
-            <div class="text-inquiry">
-                <h4 class="inquiry-link">
-                    <a href="pages/Contact-us.html">Let's connect!</a>
-                </h4>
-            </div>
-        </div>
-        <div class="image">
-            <figure>
-                <img
-                    class="hero-image"
-                    src="assets/hero-image.png"
-                    alt="girl with a bag and book in a blur classroom"
-                />
-            </figure>
-        </div>
-    </section>
-</main>
+<!--<main class="main" role="main">-->
+<!--    <section class="hero-section">-->
+<!--        <div class="text">-->
+<!--            <div class="only-text">-->
+<!--                <p class="text-title">Edwizard</p>-->
+<!--                <p class="text-description">-->
+<!--                Edwizard is an endeavor to make the children understand all the concepts-->
+<!--                they study in their school curriculum, in a practical way. This will help-->
+<!--                the children to have sustainable understanding of all the concepts. It contemplates-->
+<!--                to improve the conceptual understanding and helps student to acquire scientific temper-->
+<!--                by providing hands-on experiment, improved IQ and improved mathematical skills,-->
+<!--                programming skills, language skill-->
+<!--            </p>-->
+<!--            </div>-->
+<!--            <div class="text-inquiry">-->
+<!--                <h4 class="inquiry-link">-->
+<!--                    <a href="pages/Contact-us.html">Let's connect!</a>-->
+<!--                </h4>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="image">-->
+<!--            <figure>-->
+<!--                <img-->
+<!--                    class="hero-image"-->
+<!--                    src="assets/hero-image.png"-->
+<!--                    alt="girl with a bag and book in a blur classroom"-->
+<!--                />-->
+<!--            </figure>-->
+<!--        </div>-->
+<!--    </section>-->
+<!--</main>-->
 
 <!--footer👇 -->
 <footer class="footer"></footer>
