@@ -31,6 +31,10 @@
         width: 6rem;
         opacity: 1;
 
+        @media (max-width: 412px) {
+          width: 5rem;
+        }
+
         &:hover{
           opacity: 0.75;
           cursor: pointer;
@@ -71,7 +75,6 @@
           border-radius: 10px;
           box-shadow: 0 8px 24px rgba(0,0,0,0.12);
           padding: 0.5rem 0;
-          /*margin-top: 0.5rem;*/
           z-index: 1000;
 
           .dropdown-item {
@@ -192,15 +195,19 @@
   .mobile-menu {
     display: none;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     position: absolute;
-    top: 100%;
+    top: 0;
     right: 0;
     background-color: var(--dark-blue);
-    width: 100%;
+    width: fit-content;
     height: 100%;
     border-radius: 0 0 12px 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    padding: 1rem 2rem;
+    padding-right: 2.5rem;
+    padding-top: 3.5rem;
+    padding-left: 2rem;
     z-index: 1500;
 
     .mobile-link, .mobile-inquiry {
@@ -213,32 +220,52 @@
         color: inherit;
       }
     }
-    .mobile-link .dropdown-menu {
-      display: none;
+    .mobile-link {
+      display: flex;
       flex-direction: column;
-      margin-top: 0.5rem;
-      border: 1px solid rgba(0,0,0,0.08);
-      border-radius: 8px;
-      background-color: var(--dark-blue);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      z-index: 1600;
-      position: relative;
-      pointer-events: auto;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      .dropdown-menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-top: 0.5rem;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 6px;
+        background-color: var(--bg-pink);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        z-index: 1600;
+        position: relative;
+        pointer-events: auto;
+
+        .dropdown-item {
+          display:flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          padding: 0.5rem 1rem;
+          font-weight: 400;
+          color: var(--dark-blue);
+
+          &:hover {
+            background-color: var(--bg-blue);
+            color: var(--pink);
+          }
+        }
+      }
     }
 
     .mobile-link.show .dropdown-menu {
       display: flex;
-    }
 
-    .dropdown-item {
-      padding: 0.75rem 1rem;
-      font-weight: 400;
-
-      &:hover {
-        background-color: var(--bg-blue);
-        color: var(--pink);
+      @media (max-width: 768px) {
+        display: flex;
       }
     }
+
+
     /* only show on mobile */
     @media (min-width: 769px) {
       .mobile-menu {

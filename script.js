@@ -1,7 +1,7 @@
 const hamburger = document.getElementById("hamburger");
 const hamburgerIcon = document.getElementById("hamburger-icon");
 const mobileMenu = document.getElementById("mobile-menu");
-const dropdown = document.querySelector(".mobile-menu .mobile-link.dropdown");
+const dropdown = document.querySelector(".mobile-menu .mobile-link");
 
 hamburger.addEventListener("click", () => {
   mobileMenu.classList.toggle("show");
